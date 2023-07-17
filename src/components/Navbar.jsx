@@ -14,21 +14,37 @@ const Navbar = () => {
             
             <div className='hidden md:flex items-center '>
                 <ul className='flex gap-4'>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Support</li>
-                    <li>Platform</li>
-                    <li>Pricing</li>
+                <a href={`/`}>Home</a>
+                <a href={`/About/`}>About</a>
+                <a href={`/support/`}>Support</a>
+                <a href={`/platform/`}>Platform</a>
+                <a href={`/pricing/`}>Pricing</a>
                 </ul>
             </div>
 
 
             <div className='hidden md:flex'>
-                <button className='flex justify-between items-center  bg-transparent  px-6 gap-2'>
-                    <img src={lock} />
-                    Login
-                </button>
-                <button className='px-8 py-3 rounded-md bg-[#367DE8] text-white font-bold'>Sign Up For Free</button>
+                <form className='flex justify-between items-center  bg-transparent  px-6 gap-2'>
+                    <input
+                    id="q"
+                    aria-label="Search contacts"
+                    placeholder="Search"
+                    type="search"
+                    name="q"
+                    />
+                    <div
+                        id="search-spinner"
+                        aria-hidden
+                        hidden={true}
+                        />
+                    <div
+                    className="sr-only"
+                    aria-live="polite"
+                    ></div>
+                </form>
+                <form method="post">
+                    <button className=' px-8 py-3 rounded-md bg-[#367DE8] text-white font-bold'>Sign In</button>
+                </form>
             </div>
 
             <div className='md:hidden'  onClick={handleClick}>
@@ -42,17 +58,33 @@ const Navbar = () => {
 
         <div className={toggle?'absolute z-10 p-4  bg-white w-full px-8 md:hidden border-b':'hidden'}>
             <ul>
-                    <li className='p-4 hover:bg-gray-100'>Home</li>
+                    <a href="/" className="p-4 hover:bg-gray-100">Home</a>
                     <li className='p-4 hover:bg-gray-100'>About</li>
                     <li className='p-4 hover:bg-gray-100'>Support</li>
                     <li className='p-4 hover:bg-gray-100'>Platform</li>
                     <li className='p-4 hover:bg-gray-100'>Pricing</li>
                     <div className='flex flex-col my-4 gap-4'>
-                        <button className='border border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4'>
-                         <img src={lock} />
-                         Login
-                        </button>
-                        <button className='px-8 py-5 rounded-md bg-[#367DE8] text-white font-bold'>Sign Up For Free</button>
+                    <form className='flex justify-between items-center  bg-transparent  px-6 gap-2'>
+                                <input
+                                id="q"
+                                aria-label="Search contacts"
+                                placeholder="Search"
+                                type="search"
+                                name="q"
+                                />
+                                <div
+                                    id="search-spinner"
+                                    aria-hidden
+                                    hidden={true}
+                                    />
+                                <div
+                                className="sr-only"
+                                aria-live="polite"
+                                ></div>
+                            </form>
+                            <form method="post">
+                            <button className='px-8 py-3 rounded-md bg-[#367DE8] text-white font-bold'>Sign In</button>
+                            </form>
                     </div>
             </ul>
         </div>

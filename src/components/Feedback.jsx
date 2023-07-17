@@ -49,8 +49,8 @@ const Feedback = () => {
     <div className='w-full bg-white py-32'>
         <div className='md:max-w-[1480px] m-auto max-w-[600px]  px-4 md:px-0'>
             <div className='py-4'>
-              <h1 className='py-3 text-3xl font-bold'>User' <span className='text-[#367DE8]'>Feedback</span></h1>
-              <p className='text-[#6D737A]'>Helping you save Money and time, Always..</p>
+              <h1 className='py-3 text-3xl font-bold'>Users' <span className='text-[#367DE8]'>Feedback</span></h1>
+              <p className='text-center text-red-600 '>Happy customers review us, Always..</p>
             </div>
             
             <Slider {...settings} >

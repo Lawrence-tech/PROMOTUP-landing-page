@@ -14,9 +14,11 @@ const Hero = () => {
                 Saving <br /> Money, &Time, <br /> Always.</h1>
 
                 <div className='flex justify-center gap-4 py-4'>
-                <button className="px-6 py-2 text-lg font-semibold bg-gray-800 text-white rounded-lg hover:bg-gray-700">
-                    <i className="fab fa-apple mr-2"></i> UPLOAD
-                </button>
+                <form>
+                    <button className="px-6 py-2 text-lg font-semibold bg-gray-800 text-white rounded-lg hover:bg-gray-700">
+                        <i className="fab fa-apple mr-2"></i> UPLOAD
+                    </button>
+                </form>
                 <button className="px-6 py-2 text-lg font-semibold border border-white text-white rounded-lg hover:bg-gray-100 hover:text-gray-800">
                     <i className="fab fa-google-play mr-2"></i> REVIEW
                 </button>
