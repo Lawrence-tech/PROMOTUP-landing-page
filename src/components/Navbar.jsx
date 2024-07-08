@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {vlogo,lock, hamburgerMenu, close} from '../assets'
+import {logo,lock, hamburgerMenu, close} from '../assets'
 
 const Navbar = () => {
 
@@ -7,44 +7,28 @@ const Navbar = () => {
     const handleClick = ()=> setToggle(!toggle)
 
   return (
-    <div className='w-full h-[80px] bg-gray-300 border-b'>
+    <div className='w-full h-[80px] bg-white border-b'>
         <div className='md:max-w-[1480px] max-w-[600px] m-auto w-full h-full flex justify-between items-center md:px-0 px-4'>
             
-            <img src={vlogo} className="h-[80px] w-[100px]"/>
+            <img src={logo} className="h-[25px]" />
             
             <div className='hidden md:flex items-center '>
                 <ul className='flex gap-4'>
-                <a href={`/`}>Home</a>
-                <a href={`/About/`}>About</a>
-                <a href={`/support/`}>Support</a>
-                <a href={`/platform/`}>Platform</a>
-                <a href={`/pricing/`}>Pricing</a>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Products</li>
+                    <li>Contact</li>
                 </ul>
             </div>
 
 
             <div className='hidden md:flex'>
-                <form className='flex justify-between items-center  bg-transparent  px-6 gap-2'>
-                    <input
-                    id="q"
-                    aria-label="Search contacts"
-                    placeholder="Search"
-                    type="search"
-                    name="q"
-                    />
-                    <div
-                        id="search-spinner"
-                        aria-hidden
-                        hidden={true}
-                        />
-                    <div
-                    className="sr-only"
-                    aria-live="polite"
-                    ></div>
-                </form>
-                <form method="post">
-                    <button className=' px-8 py-3 rounded-md bg-[#367DE8] text-white font-bold'>Sign In</button>
-                </form>
+                <button className='flex justify-between items-center  bg-transparent  px-6 gap-2'>
+                    <img src={lock} />
+                    Email
+                </button>
+                {/* <button className='px-8 py-3 rounded-md bg-[#20B486] text-white font-bold'>Sign Up For Free</button> */}
             </div>
 
             <div className='md:hidden'  onClick={handleClick}>
@@ -58,33 +42,17 @@ const Navbar = () => {
 
         <div className={toggle?'absolute z-10 p-4  bg-white w-full px-8 md:hidden border-b':'hidden'}>
             <ul>
-                    <a href="/" className="p-4 hover:bg-gray-100">Home</a>
+                    <li className='p-4 hover:bg-gray-100'>Home</li>
                     <li className='p-4 hover:bg-gray-100'>About</li>
-                    <li className='p-4 hover:bg-gray-100'>Support</li>
-                    <li className='p-4 hover:bg-gray-100'>Platform</li>
-                    <li className='p-4 hover:bg-gray-100'>Pricing</li>
+                    <li className='p-4 hover:bg-gray-100'>Services</li>
+                    <li className='p-4 hover:bg-gray-100'>Products</li>
+                    <li className='p-4 hover:bg-gray-100'>Contact</li>
                     <div className='flex flex-col my-4 gap-4'>
-                    <form className='flex justify-between items-center  bg-transparent  px-6 gap-2'>
-                                <input
-                                id="q"
-                                aria-label="Search contacts"
-                                placeholder="Search"
-                                type="search"
-                                name="q"
-                                />
-                                <div
-                                    id="search-spinner"
-                                    aria-hidden
-                                    hidden={true}
-                                    />
-                                <div
-                                className="sr-only"
-                                aria-live="polite"
-                                ></div>
-                            </form>
-                            <form method="post">
-                            <button className='px-8 py-3 rounded-md bg-[#367DE8] text-white font-bold'>Sign In</button>
-                            </form>
+                        <button className='border border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4'>
+                         <img src={lock} />
+                         Email
+                        </button>
+                        {/* <button className='px-8 py-5 rounded-md bg-[#20B486] text-white font-bold'>Sign Up For Free</button> */}
                     </div>
             </ul>
         </div>
